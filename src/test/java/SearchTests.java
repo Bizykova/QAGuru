@@ -9,7 +9,7 @@ public class SearchTests {
 
     @Test
     void successfulSearchTest() {
-        Configuration.timeout = 50000;
+        Configuration.timeout = 5;
         open("https://www.google.com/");
         $("[name=q]").setValue("Selenide").pressEnter();
         $("[id=search]").shouldHave(Condition.text("selenide.org"));
